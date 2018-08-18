@@ -3,42 +3,54 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
+    <title>@ViewBag.Title - Julie og Lars' hjemmeside</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../../Content/Site.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href=""/>
 </head>
+    
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+<div id="siteWrapper" class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 hidden-sm" id="leftSiteColoumn"></div>
+        <div class="col-md-8">
+            <div id="MainWrapper" class="container-fluid">
+                <div id="topBlock" class="row">
+                    <div class="col-md-12">
+                        <img src="../../Images/wedding.jpg" id="weddingpic"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="leftDiv" class="col-md-3">
+                        <div class="icon-bar">
+                            @Html.ActionLink("Hjem", "Index", "Home", new {area = ""}, new {id = "homeButton"})
+                            @Html.ActionLink("Rengøring", "CleaningScheme", "Home", new {area = ""}, new {id = "cleaningButton"})
+
+                        </div>
+                    </div>
+                    <div id="container" class="col-md-9">
+                        @RenderBody()
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; @DateTime.Now</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Julie og Lars Holm</p>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="col-md-2" id="rightSiteColoumn"></div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
 </body>
 </html>
+

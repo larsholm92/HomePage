@@ -1,21 +1,106 @@
-﻿body {
+﻿#region Layout /*#region Layot */
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+
+#siteWrapper {
+    background-color: white;
+    width: 100%;
+}
+#leftSiteColoumn {
+    min-height: 100%;
+    background-color: white;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+#rightSiteColoumn {
+    min-height: 100%;
+    background-color: white;
 }
 
+#MainWrapper {
+    background-color: black;
+}
+
+.topDiv {
+    mso-horizontal-page-align: center;
+    color: yellow;
+}
+#weddingpic {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+}
+
+#leftDiv {
+    background-color: black;
+    float: left;
+    min-height: 100%;
+    
+}
+
+#container {
+    
+    float: right;
+    min-height: 100%;
+}
+
+#footerRow {
+    background-color: black;
+    color: white;
+}
+
+body {
+    margin: 0
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: black;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    /*transition: all 0.3s ease;*/
+    color: white;
+    font-size: 24px;
+}
+
+.icon-bar a:hover {
+    background-color:darkblue;
+    color: black;
+}
+
+/*#endregion */
+
+
+/*#region CleaningScheme */
+#cleaningTable {
+    border: solid black;
+    border-width: 2px;
+    text-align: left;
+    margin-bottom: 3%;
+}
+
+th {
+    border: solid black;
+    border-width: 2px;
+}
+
+
+/*#endregion */
+
+/*#region Home */
+#container {
+    background-color: white;
+}
+#homeContent {
+    min-height:100%
+}
+/*#endregion */
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
