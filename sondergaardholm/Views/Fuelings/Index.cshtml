@@ -1,0 +1,56 @@
+﻿@model IEnumerable<sondergaardholm.Models.Fueling>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div>
+    <input type="button" value="Create New" class="btn btn-default" onclick="location.href='@Url.Action("Create","Fuelings")'"/>
+</div>
+<div class="table-responsive">
+    <table class="dbtable">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Liters)
+            </th>
+            <th class="dbheader">
+                @Html.DisplayNameFor(model => model.Kilometers)
+            </th>
+            <th class="dbheader">
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th class="dbheader">
+                @Html.DisplayNameFor(model => model.KilometersPerLiter)
+            </th>
+            <th class="dbheader"></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Liters)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kilometers)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KilometersPerLiter)
+                </td>
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |*@
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

@@ -1,0 +1,6 @@
+Steps til at få MySQL til at virke: 
+- Tilføj de rette biblioteker 
+- Sørg for at det er de rette versioner, der installeres: https://stackoverflow.com/questions/48353585/the-provider-did-not-return-a-providermanifesttoken-string-mysql-with-entity-f
+- Sørg for at der ikke er dubletter i config filen efter ovenstående
+- Tilføj en sql-generator: https://karthicraghupathi.com/2013/01/31/using-mysql-connector-net-6-6-4-with-entity-framework-5/ (lidt usikker på om det er nødvendigt)
+- Hardcode en tabel ind i databasen, der matcher domæneklassen

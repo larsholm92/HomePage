@@ -10,6 +10,7 @@ body {
     background-color: white;
     width: 100%;
 }
+
 #leftSiteColoumn {
     min-height: 100%;
     background-color: white;
@@ -28,6 +29,7 @@ body {
     mso-horizontal-page-align: center;
     color: yellow;
 }
+
 #weddingpic {
     width: 50%;
     height: 100%;
@@ -38,11 +40,9 @@ body {
     background-color: black;
     float: left;
     min-height: 100%;
-    
 }
 
 #container {
-    
     float: right;
     min-height: 100%;
 }
@@ -61,32 +61,48 @@ body {
     background-color: black;
 }
 
-.icon-bar a {
-    display: block;
-    text-align: center;
-    /*transition: all 0.3s ease;*/
-    color: white;
-    font-size: 24px;
-}
+    .icon-bar a {
+        display: block;
+        text-align: center;
+        /*transition: all 0.3s ease;*/
+        color: white;
+        font-size: 24px;
+    }
 
-.icon-bar a:hover {
-    background-color:darkblue;
-    color: black;
-}
+        .icon-bar a:hover {
+            background-color: darkblue;
+            color: black;
+        }
 
 /*#endregion */
 
 /*#region Resources*/
-.dbtable, .dbdatacell, .dbrow {
+.dbtable {
     border: 1px solid black;
     text-align: left;
     border-width: 2px;
     margin: 3px;
-    background-color: aquamarine;
+    
+
 }
-.ItemTableRow {
+.dbtable th {
+    background-color: blue;
+    width: 20%;
+    padding: 3px;
+    height: 10px;
+}
+
+
+
+.dbtable td {
     border: 1px solid black;
+    border-width: 2px;
+    padding: 3px;
+    height: 15px;
 }
+
+
+
 /*#endregion*/
 
 
@@ -111,8 +127,9 @@ th {
 #container {
     background-color: white;
 }
+
 #homeContent {
-    min-height:100%
+    min-height: 100%
 }
 /*#endregion */
 /* Set width on the form input elements since they're 100% wide by default */

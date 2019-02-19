@@ -21,7 +21,7 @@ namespace sondergaardholm.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("MySql", throwIfV1Schema: false)
         {
         }
 
@@ -29,5 +29,7 @@ namespace sondergaardholm.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<sondergaardholm.Models.Wish> Wishes { get; set; }
     }
 }
